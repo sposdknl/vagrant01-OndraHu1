@@ -24,4 +24,7 @@ Vagrant.configure("2") do |config|
 
     # Načtení a provedení scriptu configure-zabbix-agent2.sh
     config.vm.provision "shell", path: "configure-zabbix-agent2.sh"
+
+    #Načtení a provedení scriptu install-mariadb.sh
+    config.vm.provision "shell", path: "install-mariadb.sh"
 end
