@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Unikátní hostname pro Debian (lepší než hostname školní stanice)
-UNIQUE_HOSTNAME="debian-husek$(uuidgen)"
+UNIQUE_HOSTNAME="debianVM-husek$(uuidgen)"
 SHORT_HOSTNAME=$(echo $UNIQUE_HOSTNAME | cut -d'-' -f1,2)
 
 # Záloha původního zabbix_agent2.conf
