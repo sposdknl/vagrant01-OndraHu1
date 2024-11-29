@@ -8,5 +8,3 @@ sudo systemctl restart mariadb
 
 # Kontrola stavu služby mariadb
 sudo systemctl status mariadb --no-pager
-
-# EOF
