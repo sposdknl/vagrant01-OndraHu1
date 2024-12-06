@@ -1,4 +1,4 @@
-IMAGE_NAME = "ubuntu/jammy64"
+IMAGE_NAME = "bento/ubuntu-24.04"
 
 Vagrant.configure("2") do |config|
     config.ssh.insert_key = false
@@ -10,8 +10,9 @@ Vagrant.configure("2") do |config|
 
     config.vm.define "ubuntu" do |ubuntu|
         ubuntu.vm.box = IMAGE_NAME
-        ubuntu.vm.network "forwarded_port", guest: 22, host: 2202, host_ip: "127.0.0.1"
-        ubuntu.vm.hostname = "ubuntu"
+        zabbix.vm.network "forwarded_port", guest: 22, host: 2202, host_ip: "127.0.0.1"
+    	zabbix.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
+        ubuntu.vm.hostname = "ubuntu-hushkys"
     end
 
     config.vm.provision "file", source: "id_rsa.pub", destination: "~/.ssh/me.pub"
