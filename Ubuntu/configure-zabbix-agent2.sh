@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Unikatni hostname ubuntu (Lepší než hostname školní stanice)
-UNIQUE_HOSTNAME="ubuntu-$(uuidgen)"
+UNIQUE_HOSTNAME="husek-vagrant"
 SHORT_HOSTNAME=$(echo $UNIQUE_HOSTNAME | cut -d'-' -f1,2)
 
 # # Konfigurace zabbix_agent2.conf
